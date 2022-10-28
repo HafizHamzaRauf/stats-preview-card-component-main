@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  font-family: "Lexend Deca", "Inter";
+  color: hsl(0, 0%, 100%);
+}
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  max-width: 80rem;
+  margin: 15rem auto;
+}
+.container-item {
+  background-color: hsl(244, 38%, 16%);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.image {
+  max-width: 100%;
+
+  background-image: url("./images/image-header-desktop.jpg");
+}
+.overlay {
+  max-width: 100%;
+  height: 35rem;
+  background-color: rgba(150, 58, 207, 0.486);
+}
+.primary-heading {
+  font-size: 3rem;
+}
+.insights {
+  color: hsl(277, 64%, 61%);
+}
+.description {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+.data-description {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.data {
+  display: flex;
+  gap: 5rem;
+}
+.data strong {
+  font-size: 2rem;
+}
+
+@media (max-width: 546px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+
+    margin: 4rem 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .primary-heading {
+    text-align: center;
+  }
+  .overlay {
+    height: 22rem;
+  }
+  .image {
+    grid-row: 1/2;
+  }
+  .description {
+    text-align: center;
+  }
+  .data {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+  }
+  .data-description {
+    margin-top: 5px;
+  }
+}
